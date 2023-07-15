@@ -1,0 +1,22 @@
+CREATE DATABASE sensor_data;
+USE sensor_data;
+
+CREATE TABLE temperature_records (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    temperature FLOAT NOT NULL,
+    timestamp TIME DEFAULT CURRENT_TIME
+);
+
+CREATE TABLE humidity_records (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    humidity FLOAT NOT NULL,
+    timestamp TIME DEFAULT CURRENT_TIME
+);
+
+CREATE TABLE users (
+   	id INT PRIMARY KEY AUTO_INCREMENT,
+   	username VARCHAR(255) NOT NULL UNIQUE,
+	email VARCHAR(255) NOT NULL,
+        password VARCHAR(255) NOT NULL
+        )
+
